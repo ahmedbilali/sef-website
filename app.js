@@ -151,17 +151,17 @@ dropDownMenuBtnsObj["home"].addEventListener("click", () => {
   menuBarClose();
 });
 
-joinBtnDropDowmMenu.addEventListener("click", () => {
-  window.open("https://forms.gle/eRgzeDvjGuRAatRu9");
-});
+// joinBtnDropDowmMenu.addEventListener("click", () => {
+//   window.open("https://forms.gle/eRgzeDvjGuRAatRu9");
+// });
 
-joinBtnNavBar.addEventListener("click", () => {
-  window.open("https://forms.gle/eRgzeDvjGuRAatRu9");
-});
+// joinBtnNavBar.addEventListener("click", () => {
+//   window.open("https://forms.gle/eRgzeDvjGuRAatRu9");
+// });
 
-document.querySelector("#watch-more").addEventListener("click", () => {
-  window.open("https://www.facebook.com/MesoPakistan/videos");
-});
+// document.querySelector("#watch-more").addEventListener("click", () => {
+//   window.open("https://www.facebook.com/MesoPakistan/videos");
+// });
 
 document.getElementById("sub-button").addEventListener("click", () => {
   const name = document.getElementById("name-input");

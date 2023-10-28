@@ -14,7 +14,7 @@ button {
 
 .heading {
   border: solid 2px;
-  border-color: rgba(121, 191, 66, 255);
+  border-color: rgba(177, 212, 224, 255);
   background-color: black;
   height: 50px;
   padding-top: 10px;
@@ -29,7 +29,7 @@ button {
   transform: translateY(20px);
 }
 .navbar {
-  background-color: rgb(163, 230, 112);
+  background-color: rgb(46, 139, 192);
   height: 35px;
   margin: 0px;
   padding: 0px;
@@ -44,7 +44,7 @@ button {
 
 .logo-img {
   height: 100px;
-  margin-top: 30px;
+  margin-top: 15px;
   cursor: pointer;
 }
 
@@ -54,10 +54,10 @@ button {
 
 .logo-container {
   border: solid 5px;
-  border-color: rgba(121, 191, 66, 255);
+  border-color: rgba(177, 212, 224, 255);
   background-color: black;
-  width: 105px;
-  height: 150px;
+  width: 115px;
+  height: 130px;
   margin: 90px 0px 0px 100px;
   text-align: center;
   border-radius: 0px 0px 20px 20px;
@@ -108,7 +108,8 @@ button {
 
 .donate-card {
   filter: brightness(100%);
-  background-image: url(images/general/donate-bg-picture.jpg);
+  background-color: #0C2D48;
+  /* background-image: url(images/general/donate-bg-picture.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -127,25 +128,26 @@ button {
   align-items: center;
   flex-direction: column;
   background-color: #eef4eced;
-  padding-top: 30px;
+  padding-top: 120px;
 }
 
 .quote-card {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 #quote {
+  text-align: center;
   color: white;
   flex: 1;
 }
 
 #author {
-  color: #f5c528;
+  color: #B1D4E0;
 }
 
 .donate-div {
@@ -154,22 +156,23 @@ button {
   flex-direction: column;
   align-items: center;
   box-shadow: inset 0px 0px 1000px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
 .make-donation-title {
   display: absolute;
   font-size: 2rem;
   font-weight: 800;
-  color: gold;
+  color: #B1D4E0;
   margin: 10px 0px 10px 0px;
-  animation-name: donation-title-blink;
+  /* animation-name: donation-title-blink;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-delay: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   animation-fill-mode: none;
-  animation-play-state: running;
+  animation-play-state: running; */
   transition: 0.2s;
 }
 
@@ -603,14 +606,14 @@ button {
   }
   .logo-container {
     margin-left: 10px;
-    border: solid 2px rgba(121, 191, 66, 255);
+    border: solid 2px rgba(177, 212, 224, 255);
     width: 65px;
-    height: 100px;
-    margin-top: 70px;
+    height: 80px;
+    margin-top: 50px;
   }
 
   .logo-img {
-    height: 60px;
+    height: 50px;
   }
 
   .section-footer {
