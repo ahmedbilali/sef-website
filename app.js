@@ -49,7 +49,7 @@ const offsetTop = -150;
 const navBtns = document.getElementsByClassName("nav-btn");
 const donateBtn = document.getElementsByClassName("special-btn")[0];
 const sections = document.getElementsByClassName("section");
-const donateSection = document.querySelector(".donate-card");
+// const donateSection = document.querySelector(".donate-card");
 const dropDownMenu = document.querySelector(".drop-down-menu-bg");
 const dropDownMenuBtns = document.querySelector(".drop-down-menu");
 const joinBtnDropDowmMenu = dropDownMenuBtns.lastElementChild;
@@ -58,18 +58,22 @@ const body = document.getElementsByTagName("body")[0];
 
 const navBtnsObj = {
   about: navBtns[0],
-  projects: navBtns[1],
-  media: navBtns[2],
-  contact: navBtns[3],
+  vision: navBtns[1],
+  mission: navBtns[2],
+  goals: navBtns[3],
+  sponsorship: navBtns[4],
+  contact: navBtns[5],
   donate: donateBtn,
 };
 
 const sectionsObj = {
-  about: sections[1],
-  projects: sections[2],
-  media: sections[3],
-  contact: sections[4],
-  donate: donateSection,
+  about: sections[0],
+  vision: sections[1],
+  mission: sections[2],
+  goals: sections[3],
+  sponsorship: sections[4],
+  contact: sections[5],
+  // donate: donateSection,
 };
 
 function windowScroll(section, offsetTop) {
@@ -86,20 +90,24 @@ navBtnsObj["about"].addEventListener("click", () => {
   windowScroll(sectionsObj["about"], offsetTop);
 });
 
-navBtnsObj["projects"].addEventListener("click", () => {
-  windowScroll(sectionsObj["projects"], offsetTop);
+navBtnsObj["vision"].addEventListener("click", () => {
+  windowScroll(sectionsObj["vision"], offsetTop);
 });
 
-navBtnsObj["media"].addEventListener("click", () => {
-  windowScroll(sectionsObj["media"], offsetTop);
+navBtnsObj["mission"].addEventListener("click", () => {
+  windowScroll(sectionsObj["mission"], offsetTop);
+});
+
+navBtnsObj["goals"].addEventListener("click", () => {
+  windowScroll(sectionsObj["goals"], offsetTop);
+});
+
+navBtnsObj["sponsorship"].addEventListener("click", () => {
+  windowScroll(sectionsObj["sponsorship"], offsetTop);
 });
 
 navBtnsObj["contact"].addEventListener("click", () => {
   windowScroll(sectionsObj["contact"], offsetTop);
-});
-
-navBtnsObj["donate"].addEventListener("click", () => {
-  windowScroll(sectionsObj["donate"], offsetTop);
 });
 
 document.querySelector(".logo-container").addEventListener("click", () => {
@@ -121,9 +129,11 @@ const dropDownMenuBtnsObj = {
   donate: dropDownMenuBtns.children[0],
   home: dropDownMenuBtns.children[1],
   about: dropDownMenuBtns.children[2],
-  projects: dropDownMenuBtns.children[3],
-  media: dropDownMenuBtns.children[4],
-  contact: dropDownMenuBtns.children[5],
+  vision: dropDownMenuBtns.children[3],
+  mission: dropDownMenuBtns.children[4],
+  goals: dropDownMenuBtns.children[5],
+  sponsorship: dropDownMenuBtns.children[6],
+  contact: dropDownMenuBtns.children[7],
 };
 
 dropDownMenuBtnsObj["donate"].addEventListener("click", () => {
@@ -134,12 +144,20 @@ dropDownMenuBtnsObj["about"].addEventListener("click", () => {
   windowScroll(sectionsObj["about"], offsetTop);
   menuBarClose();
 });
-dropDownMenuBtnsObj["projects"].addEventListener("click", () => {
-  windowScroll(sectionsObj["projects"], offsetTop);
+dropDownMenuBtnsObj["vision"].addEventListener("click", () => {
+  windowScroll(sectionsObj["vision"], offsetTop);
   menuBarClose();
 });
-dropDownMenuBtnsObj["media"].addEventListener("click", () => {
-  windowScroll(sectionsObj["media"], offsetTop);
+dropDownMenuBtnsObj["mission"].addEventListener("click", () => {
+  windowScroll(sectionsObj["mission"], offsetTop);
+  menuBarClose();
+});
+dropDownMenuBtnsObj["goals"].addEventListener("click", () => {
+  windowScroll(sectionsObj["goals"], offsetTop);
+  menuBarClose();
+});
+dropDownMenuBtnsObj["sponsorship"].addEventListener("click", () => {
+  windowScroll(sectionsObj["sponsorship"], offsetTop);
   menuBarClose();
 });
 dropDownMenuBtnsObj["contact"].addEventListener("click", () => {
@@ -164,20 +182,18 @@ dropDownMenuBtnsObj["home"].addEventListener("click", () => {
 // });
 
 document.getElementById("sub-button").addEventListener("click", () => {
-  const name = document.getElementById("name-input");
-  const email = document.getElementById("email-input");
+  const name = document.getElementById("yname");
+  const email = document.getElementById("yemail");
+  const message = document.getElementById("ymessage");
 
-  if (name.value === "" && email.value === "") {
-    alert("Please enter your name and email to subscribe!");
-  } else if (name.value != "" && email.value === "") {
-    alert("Please enter your email to subscribe!");
-  } else if (name.value === "" && email.value != "") {
-    alert("Please enter your name to subscribe!");
+  if (name.value === "" || email.value === "" || message.value) {
+    alert("Please enter all values!");
   } else {
     apiCall(
       `https://olenarm5i6.execute-api.ap-southeast-1.amazonaws.com/UAT?email=${email.value}&name=${name.value}`
     );
     name.value = "";
     email.value = "";
+    message.value = "";
   }
 });
