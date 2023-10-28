@@ -396,6 +396,9 @@ button {
 }
 
 .section-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   background-color: #189AB4;
   display: flex;
   justify-content: space-between;
