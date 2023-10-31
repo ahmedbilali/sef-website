@@ -12,79 +12,10 @@ button {
   cursor: pointer;
 }
 
-table {
-  width: 80%;
-  padding: 20px;
-}
-
-td {
-  border-bottom: 2px solid #05445E;
-  padding: 10px;
-  width: 400px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* tr:nth-child(even) {
-  background-color: #75E6DA;
-} */
-
-tr:hover {background-color: #75E6DA;}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-label {
-  justify-self: center;
-  align-items: center;
-}
-
-.contact-form {
-  padding: 30px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  justify-self: center;
-  justify-items: center;
-  align-items: center;
-  align-self: center;
-}
-
 .heading {
-  border-radius: 10px;
   border: solid 2px;
   border-color: rgba(177, 212, 224, 255);
-  background-color: #05445E;
+  background-color: black;
   height: 50px;
   padding-top: 10px;
   width: 200px;
@@ -175,7 +106,7 @@ label {
   }
 }
 
-.intro-card {
+.donate-card {
   filter: brightness(100%);
   background-color: #05445E;
   /* background-image: url(images/general/donate-bg-picture.jpg); */
@@ -206,7 +137,7 @@ label {
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #quote {
@@ -282,7 +213,7 @@ label {
 .black-text-background {
   width: 330px;
   margin: 0px;
-  background-color: rgba(5, 68, 94, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 80px;
   position: absolute;
 }
@@ -315,6 +246,63 @@ label {
   grid-template-columns: 300px 300px 300px 300px;
 }
 
+.fb-video {
+  text-align: center;
+  margin: 10px;
+  height: 160px;
+  justify-content: center;
+  align-items: top;
+  box-shadow: 0px -5px 8px 1px rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  background-color: black;
+  background-image: url(images/general/loading-gif.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flood-img {
+  background-image: url(images/project-images/flood.jpg);
+  background-size: 550px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.education-img {
+  background-image: url(images/project-images/education.jpg);
+  background-size: 550px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blanket-img {
+  background-image: url(images/project-images/blanket.jpg);
+  background-size: 350px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clothes-img {
+  background-image: url(images/project-images/clothes.jpg);
+  background-size: 550px 300px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.ramadan-img {
+  background-image: url(images/project-images/ramadan.jpg);
+  background-size: 450px 300px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.wheelchair-img {
+  background-image: url(images/project-images/wheelchair.jpg);
+  background-size: 550px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .grid-text {
   font-size: 30px;
   font-weight: 900;
@@ -322,39 +310,22 @@ label {
   z-index: 1;
 }
 
-.section-vision {
+.section-about {
   display: flex;
-  flex-direction: column;
-  vertical-align: middle;
-  align-items: center;
   justify-content: center;
   background-color: #D4F1F4;
   padding-top: 30px;
-  padding-bottom: 30px;
-  
 }
 
-#note {
-  font-size: 0.85rem;
-  line-height: 20px;
-  padding: 20px;
-  align-self: center;
-  justify-self: center;
-  /* width: 100%; */
-}
-
-#vision-img {
-  width: 100px;
-  height: 100px;
-  align-self: center;
-  justify-self: center;
-  padding: 20px;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 1); */
-}
-
-#vision-text {
+#about-img {
   width: 300px;
-  margin-left: 50px;
+  height: 225px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+#about-text {
+  width: 300px;
+  margin-right: 50px;
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -373,12 +344,12 @@ label {
 }
 
 .nav-btn:active {
-  color: #05445E;
+  color: black;
 }
 
 .special-btn {
   margin-top: 30px;
-  background-color: #05445E;
+  background-color: black;
   border-style: solid;
   width: 130px;
   height: 40px;
@@ -430,11 +401,11 @@ label {
   justify-content: space-between;
   padding-left: 30px;
   padding-right: 30px;
-  border-bottom: 10px solid #05445E;
+  border-bottom: 10px solid black;
   padding-bottom: 30px;
   margin-top: 50px;
   padding-top: 30px;
-  border-top: 5px solid #05445E;
+  border-top: 5px solid black;
 }
 
 .contact-section {
@@ -477,9 +448,9 @@ label {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   font-size: 15px;
   font-weight: 600;
-  background-color: #75E6DA;
+  background-color: rgb(76, 255, 76);
   transition: 0.2s;
-  height: 35px;
+  height: 25px;
 }
 
 #sub-button:hover {
@@ -620,13 +591,13 @@ label {
   .media-grids {
     grid-template-columns: 300px;
   }
-  .section-vision {
+  .section-about {
     flex-direction: column;
     align-items: center;
   }
-  #vision-text {
+  #about-text {
     margin-right: 0px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.1rem;
   }
   .logo-container {
