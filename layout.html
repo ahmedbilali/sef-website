@@ -34,7 +34,7 @@
         />
       </div>
       <div class="nav-btns nav-right-margin">
-        <button class="nav-btn">Home</button>
+        <!-- <button class="nav-btn">Home</button> -->
         <!-- <button class="nav-btn">Projects</button>
         <button class="nav-btn">Media</button>
         <button class="nav-btn">Contact Us</button> -->
@@ -117,14 +117,6 @@
       onAuthStateChanged,
     } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 
-    import {
-      getDatabase,
-      ref,
-      set,
-      child,
-      remove,
-    } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
-
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -143,16 +135,7 @@
 
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
-    const db = getDatabase();
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const payment_status = urlParams.get("call_back_status");
-
-    if (payment_status !== null) {
-      if (payment_status === "success") {
-        alert("Donation has been sent!");
-      }
-    }
     const signInButton = document.getElementById("signInButton");
     const signOutButton = document.getElementById("signOutButton");
     const message = document.getElementById("message");
@@ -165,17 +148,6 @@
     donateUs.style.display = "none";
     formHeading.innerHTML = "Create an Account";
 
-    if (payment_status !== null) {
-      if (payment_status === "success") {
-        alert("Donation has been sent!");
-      }
-    }
-
-    const InsertDonationRecord = async () => {
-      set(ref(db, "Donations"), {
-        email: "",
-      });
-    };
     const userSignin = async () => {
       signInWithPopup(auth, provider)
         .then((result) => {
