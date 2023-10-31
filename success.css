@@ -757,6 +757,93 @@ button {
     grid-template-columns: 300px 300px;
   }
 }
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a background color and set the font for the whole page */
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #005c97;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Style the container div */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the payment confirmation section */
+.payment-confirmation {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-tick {
+  max-width: 100px;
+  max-height: 50px;
+  display: inline;
+  margin-top: 20px;
+}
+
+/* Style headings and paragraphs */
+h2 {
+  color: #005c97;
+  font-size: 24px;
+  margin-top: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style the "Return to Homepage" link */
+a {
+  display: inline-block;
+  background-color: #005c97;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #003e6b;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .payment-confirmation {
+    padding: 10px;
+  }
+}
 
 @media (min-width: 1100px) and (max-width: 1300px) {
   .menu-btn {
