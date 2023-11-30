@@ -180,20 +180,3 @@ dropDownMenuBtnsObj["home"].addEventListener("click", () => {
 // document.querySelector("#watch-more").addEventListener("click", () => {
 //   window.open("https://www.facebook.com/MesoPakistan/videos");
 // });
-
-document.getElementById("sub-button").addEventListener("click", () => {
-  const name = document.getElementById("yname");
-  const email = document.getElementById("yemail");
-  const message = document.getElementById("ymessage");
-
-  if (name.value === "" || email.value === "" || message.value) {
-    alert("Please enter all values!");
-  } else {
-    apiCall(
-      `https://olenarm5i6.execute-api.ap-southeast-1.amazonaws.com/UAT?email=${email.value}&name=${name.value}`
-    );
-    name.value = "";
-    email.value = "";
-    message.value = "";
-  }
-});
